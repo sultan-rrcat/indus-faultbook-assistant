@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faultbook Assistant</title>
+    <link rel="icon" href="/static/icons/favicon_dark.ico?v=2" type="image/x-icon">
+    <script src="/static/js/marked.min.js"></script>
+    <script src="/static/js/script.js" defer></script>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <header class="header">
+            <div class="header-title">
+                <div class="header-icon">
+                    <img id="header-icon" src="/static/icons/logo-bg-removed.png" alt="Indus Assistant Logo">
+                </div>
+                <h1>Indus Faultbook Assistant</h1>
+            </div>
+
+            <div class="status-indicator">
+                <div class="network-status">
+                    <div class="status-dot"></div>
+                    <span>Secure Network • Research Mode</span>
+                </div>
+
+                <div id="stream-toggle" class="stream-toggle" onclick="toggleStreaming()">
+                    <span>Streaming</span>
+                    <div class="stream-toggle-switch"></div>
+                </div>
+
+                <div class="theme-toggle" onclick="toggleTheme()">
+                    <span class="theme-icon">
+                        <img id="light-themeIcon" src="/static/icons/light.svg" alt="Light mode">
+                    </span>
+                    <div class="theme-toggle-switch"></div>
+                    <span class="theme-icon">
+                        <img id="dark-themeIcon" src="/static/icons/dark-mode.svg" alt="Dark mode">
+                    </span>
+                </div>
+
+                <!-- Mode Selection Dropdown -->
+                <div class="mode-selector">
+                    <label for="mode-dropdown">Mode:</label>
+                    <select id="mode-dropdown" onchange="changeMode(this.value)">
+                        <option value="automatic" selected>Automatic</option>
+                        <option value="general">General</option>
+                        <option value="indus-faults">Indus Faults</option>
+                        <option value="rrcat-info">RRCAT Info</option>
+                    </select>
+                </div>
+            </div>
+        </header>
+
+        <div class="chat-container">
+            <div id="chat-messages" class="chat-messages">
+                <div class="message-bubble bot-message welcome-message">
+                    <strong>Welcome to the Indus Accelerator Faultbook Assistant</strong><br><br>
+                    I am your specialized assistant designed to support Indus accelerator operations, fault diagnostics, SQL-based data queries, and advanced technical Q&A. I can help you analyze system logs, fetch and summarize database insights, interpret research documents, and answer your accelerator physics and engineering questions effectively.
+                </div>
+            </div>
+
+            <div id="chat-suggestions" class="chat-suggestions">
+                <p class="suggestion-title">Try asking:</p>
+                <div class="suggestion-buttons">
+                </div>
+            </div>
+
+            <div id="loading-indicator" class="loading-indicator">
+                <div class="spinner"></div>
+                <p id="loading-text-container">Processing your query...</p>
+            </div>
+
+            <div class="input-area">
+                <div class="input-container">
+                    <div class="input-wrapper">
+                        <textarea 
+                            id="user-input" 
+                            placeholder="Ask me anything ..." 
+                            rows="1"
+                        ></textarea>
+                    </div>
+                    <button id="send-button">
+                        <img id="send-icon" src="/static/icons/send-dark.svg" alt="Send">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function changeMode(mode) {
+            console.log("Mode changed to:", mode);
+            // Later we can add logic to update chat behavior based on selected mode
+        }
+    </script>
+</body>
+</html>

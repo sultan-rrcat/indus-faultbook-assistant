@@ -1,0 +1,3 @@
+how to get rid of all things start a fresh git init
+1. git rm -rf .git
+2. git init

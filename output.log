@@ -1,0 +1,142 @@
+2026-02-12 12:22:37.803 [info] [Main] update#setState idle
+2026-02-12 12:22:38.461 [info] [Window] Started local extension host with pid 1606340.
+2026-02-12 12:22:38.687 [info] [Settings Sync] [AutoSync] Using settings sync service https://vscode-sync.trafficmanager.net/
+2026-02-12 12:22:38.687 [info] [Settings Sync] [AutoSync] Disabled.
+2026-02-12 12:22:38.881 [info] [Extension Host] Extension host with pid 1606340 started
+2026-02-12 12:22:38.881 [info] [Extension Host] Skipping acquiring lock for /home/yurapc/.config/Code/User/workspaceStorage/a8d27de41257ef8c9b0bec0aee7978c4.
+2026-02-12 12:22:38.910 [error] [Network] #1: https://main.vscode-cdn.net/extensions/marketplace.json - error GET net::ERR_NAME_NOT_RESOLVED
+2026-02-12 12:22:38.942 [info] [Extension Host] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onAuthenticationRequest:github'
+2026-02-12 12:22:38.945 [error] [Main] #1: https://update.code.visualstudio.com/api/update/linux-x64/stable/591199df409fbf59b4b52d5ad4ee0470152a9b31 - error undefined net::ERR_NAME_NOT_RESOLVED
+2026-02-12 12:22:38.945 [error] [Main] update#isLatestVersion(): failed to check for updates
+2026-02-12 12:22:38.946 [error] [Main] Error: net::ERR_NAME_NOT_RESOLVED
+    at SimpleURLLoaderWrapper.<anonymous> (node:electron/js2c/browser_init:2:124691)
+    at SimpleURLLoaderWrapper.emit (node:events:519:28)
+2026-02-12 12:22:38.967 [info] [Extension Host] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2026-02-12 12:22:38.983 [info] [Extension Host] ExtensionService#_doActivateExtension vscode.configuration-editing, startup: false, activationEvent: 'onLanguage:jsonc'
+2026-02-12 12:22:38.990 [info] [Extension Host] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2026-02-12 12:22:39.041 [info] [Extension Host] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2026-02-12 12:22:39.186 [info] [GitHub Authentication] Reading sessions from keychain...
+2026-02-12 12:22:39.186 [info] [GitHub Authentication] Getting sessions for all scopes...
+2026-02-12 12:22:39.186 [info] [GitHub Authentication] Got 0 sessions for ...
+2026-02-12 12:22:39.186 [info] [GitHub Authentication] Getting sessions for all scopes...
+2026-02-12 12:22:39.186 [info] [GitHub Authentication] Got 0 sessions for ...
+2026-02-12 12:22:39.186 [info] [GitHub Authentication] Getting sessions for all scopes...
+2026-02-12 12:22:39.186 [info] [GitHub Authentication] Got 0 sessions for ...
+2026-02-12 12:22:39.186 [info] [GitHub Authentication] Getting sessions for all scopes...
+2026-02-12 12:22:39.186 [info] [GitHub Authentication] Got 0 sessions for ...
+2026-02-12 12:22:39.186 [info] [GitHub Authentication] Getting sessions for all scopes...
+2026-02-12 12:22:39.186 [info] [GitHub Authentication] Got 0 sessions for ...
+2026-02-12 12:22:39.269 [info] [Window] MCP Registry configured: https://api.mcp.github.com
+2026-02-12 12:22:39.342 [info] [JSON Language Server] read schema from vscode: vscode://schemas/settings/user
+2026-02-12 12:22:39.360 [info] [Extension Host] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2026-02-12 12:22:39.364 [info] [JSON Language Server] cancelled
+2026-02-12 12:22:39.367 [info] [Window] Settings Sync: Account status changed from uninitialized to unavailable
+2026-02-12 12:22:39.370 [info] [JSON Language Server] cancelled
+2026-02-12 12:22:39.371 [info] [JSON Language Server] read schema from vscode: vscode://schemas/settings/user
+2026-02-12 12:22:39.374 [info] [Extension Host] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2026-02-12 12:22:39.416 [info] [Extension Host] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2026-02-12 12:22:39.428 [info] [Cloud Changes] Prompting to enable cloud changes, has application previously launched from Continue On flow: false
+2026-02-12 12:22:39.441 [info] [JSON Language Server] cancelled
+2026-02-12 12:22:39.443 [info] [JSON Language Server] schema change detected vscode://schemas/settings/user
+2026-02-12 12:22:39.481 [info] [JSON Language Server] read schema from vscode: vscode://schemas/settings/user
+2026-02-12 12:22:39.517 [info] [Git] [main] Log level: Info
+2026-02-12 12:22:39.517 [info] [Git] [main] Validating found git in: "git"
+2026-02-12 12:22:39.517 [info] [Git] [main] Using git "2.43.0" from "git"
+2026-02-12 12:22:39.517 [info] [Git] [Model][doInitialScan] Initial repository scan started
+2026-02-12 12:22:39.517 [info] [Git] > git rev-parse --show-toplevel [5ms]
+2026-02-12 12:22:39.517 [info] [Git] fatal: not a git repository (or any of the parent directories): .git
+2026-02-12 12:22:39.517 [info] [Git] > git rev-parse --show-toplevel [1ms]
+2026-02-12 12:22:39.517 [info] [Git] fatal: not a git repository (or any of the parent directories): .git
+2026-02-12 12:22:39.517 [info] [Git] > git rev-parse --show-toplevel [2ms]
+2026-02-12 12:22:39.517 [info] [Git] fatal: not a git repository (or any of the parent directories): .git
+2026-02-12 12:22:39.517 [info] [Git] [Model][doInitialScan] Initial repository scan completed - repositories (0), closed repositories (0), parent repositories (0), unsafe repositories (0)
+2026-02-12 12:22:39.536 [info] [Extension Host] Eager extensions activated
+2026-02-12 12:22:39.555 [info] [Extension Host] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2026-02-12 12:22:39.557 [info] [Extension Host] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2026-02-12 12:22:39.564 [info] [Remote Tunnel Service] No other tunnel running
+2026-02-12 12:22:39.590 [info] [GitHub] Log level: Info
+2026-02-12 12:22:39.617 [info] [JSON Language Server] read schema from vscode: vscode://schemas/settings/resourceLanguage
+2026-02-12 12:22:39.618 [info] [JSON Language Server] read schema from vscode: vscode://schemas/ignoredSettings
+2026-02-12 12:22:39.622 [info] [JSON Language Server] read schema from vscode: vscode://schemas/launch
+2026-02-12 12:22:39.625 [info] [JSON Language Server] read schema from vscode: vscode://schemas/token-styling
+2026-02-12 12:22:39.625 [info] [JSON Language Server] read schema from vscode: vscode://schemas/textmate-colors
+2026-02-12 12:22:39.625 [info] [JSON Language Server] read schema from vscode: vscode://schemas/workbench-colors
+2026-02-12 12:22:39.722 [info] [JSON Language Server] cancelled
+2026-02-12 12:22:39.723 [info] [JSON Language Server] read schema from vscode: vscode://schemas/settings/user
+2026-02-12 12:22:40.127 [error] [Network] #1: https://marketplace.visualstudio.com/_apis/public/gallery/extensionquery - error POST Failed to fetch
+2026-02-12 12:22:40.128 [error] [Window] Failed: Failed to fetch
+    at eit.L (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:1369:34495)
+    at async eit.I (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:1369:30292)
+    at async a (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:1369:29048)
+    at async eit.query (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:1369:29455)
+    at async Ivt.queryGallery (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2777:14748)
+    at async Lcn.Mc (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2773:13219)
+    at async vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2773:4473
+2026-02-12 12:22:40.792 [error] [Network] #2: https://mobile.events.data.microsoft.com/OneCollector/1.0?cors=true&content-type=application/x-json-stream - error POST net::ERR_NAME_NOT_RESOLVED
+2026-02-12 12:22:40.927 [info] [JSON Language Server] schema change detected vscode://schemas/settings/resourceLanguage
+2026-02-12 12:22:40.928 [info] [JSON Language Server] read schema from vscode: vscode://schemas/settings/user
+2026-02-12 12:22:40.939 [error] [Network] #2: https://marketplace.visualstudio.com/_apis/public/gallery/vscode/ms-azuretools/vscode-containers/latest - error GET Failed to fetch
+2026-02-12 12:22:40.939 [error] [Window] Error while getting the latest version for the extension ms-azuretools.vscode-containers from https://marketplace.visualstudio.com/_apis/public/gallery/vscode/{publisher}/{name}/latest. Trying the fallback https://www.vscode-unpkg.net/_gallery/{publisher}/{name}/latest Failed
+2026-02-12 12:22:40.940 [error] [Network] #3: https://marketplace.visualstudio.com/_apis/public/gallery/vscode/ms-vscode-remote/remote-containers/latest - error GET Failed to fetch
+2026-02-12 12:22:40.940 [error] [Window] Error while getting the latest version for the extension ms-vscode-remote.remote-containers from https://marketplace.visualstudio.com/_apis/public/gallery/vscode/{publisher}/{name}/latest. Trying the fallback https://www.vscode-unpkg.net/_gallery/{publisher}/{name}/latest Failed
+2026-02-12 12:22:40.941 [error] [Window] Error while getting the latest version for the extension ms-kubernetes-tools.vscode-kubernetes-tools from https://marketplace.visualstudio.com/_apis/public/gallery/vscode/{publisher}/{name}/latest. Trying the fallback https://www.vscode-unpkg.net/_gallery/{publisher}/{name}/latest Failed
+2026-02-12 12:22:40.941 [error] [Network] #4: https://marketplace.visualstudio.com/_apis/public/gallery/vscode/ms-kubernetes-tools/vscode-kubernetes-tools/latest - error GET Failed to fetch
+2026-02-12 12:22:40.941 [info] [JSON Language Server] schema change detected vscode://schemas/ignoredSettings
+2026-02-12 12:22:40.942 [error] [Window] Error while getting the latest version for the extension eamodio.gitlens from https://marketplace.visualstudio.com/_apis/public/gallery/vscode/{publisher}/{name}/latest. Trying the fallback https://www.vscode-unpkg.net/_gallery/{publisher}/{name}/latest Failed
+2026-02-12 12:22:40.942 [error] [Network] #5: https://marketplace.visualstudio.com/_apis/public/gallery/vscode/eamodio/gitlens/latest - error GET Failed to fetch
+2026-02-12 12:22:40.942 [error] [Network] #6: https://marketplace.visualstudio.com/_apis/public/gallery/vscode/vscodevim/vim/latest - error GET Failed to fetch
+2026-02-12 12:22:40.942 [info] [Git] > git rev-parse --show-toplevel [2ms]
+2026-02-12 12:22:40.942 [info] [Git] fatal: not a git repository (or any of the parent directories): .git
+2026-02-12 12:22:40.943 [error] [Window] Error while getting the latest version for the extension vscodevim.vim from https://marketplace.visualstudio.com/_apis/public/gallery/vscode/{publisher}/{name}/latest. Trying the fallback https://www.vscode-unpkg.net/_gallery/{publisher}/{name}/latest Failed
+2026-02-12 12:22:40.987 [error] [Network] #11: https://www.vscode-unpkg.net/_gallery/vscodevim/vim/latest - error GET Failed to fetch
+2026-02-12 12:22:40.988 [error] [Network] #8: https://www.vscode-unpkg.net/_gallery/ms-vscode-remote/remote-containers/latest - error GET Failed to fetch
+2026-02-12 12:22:40.988 [error] [Network] #10: https://www.vscode-unpkg.net/_gallery/eamodio/gitlens/latest - error GET Failed to fetch
+2026-02-12 12:22:40.988 [error] [Window] Error while getting the latest version for the extension vscodevim.vim. TypeError: Failed to fetch
+2026-02-12 12:22:40.988 [error] [Window] Error while getting the latest version for the extension ms-vscode-remote.remote-containers. TypeError: Failed to fetch
+2026-02-12 12:22:40.988 [error] [Window] Error while getting the latest version for the extension eamodio.gitlens. TypeError: Failed to fetch
+2026-02-12 12:22:40.989 [error] [Network] #7: https://www.vscode-unpkg.net/_gallery/ms-azuretools/vscode-containers/latest - error GET Failed to fetch
+2026-02-12 12:22:40.989 [error] [Network] #9: https://www.vscode-unpkg.net/_gallery/ms-kubernetes-tools/vscode-kubernetes-tools/latest - error GET Failed to fetch
+2026-02-12 12:22:40.989 [error] [Window] Error while getting the latest version for the extension ms-azuretools.vscode-containers. TypeError: Failed to fetch
+2026-02-12 12:22:40.989 [error] [Window] Error while getting the latest version for the extension ms-kubernetes-tools.vscode-kubernetes-tools. TypeError: Failed to fetch
+2026-02-12 12:22:41.001 [info] [JSON Language Server] schema change detected vscode://schemas/settings/user
+2026-02-12 12:22:41.006 [error] [Network] #12: https://marketplace.visualstudio.com/_apis/public/gallery/extensionquery - error POST Failed to fetch
+2026-02-12 12:22:41.007 [error] [Window] Failed: Failed to fetch
+    at eit.L (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:1369:34495)
+    at async eit.I (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:1369:30292)
+    at async eit.A (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:1369:23817)
+    at async eit.B (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:1369:24828)
+    at async eit.getExtensions (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:1369:22881)
+    at async Ivt.getExtensions (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2777:15150)
+    at async Wcn.Rc (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2773:16872)
+    at async Wcn.$c (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2773:19516)
+    at async Wcn.Mc (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2773:13129)
+    at async vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2773:4473
+2026-02-12 12:22:41.015 [info] [JSON Language Server] read schema from vscode: vscode://schemas/settings/resourceLanguage
+2026-02-12 12:22:41.016 [info] [JSON Language Server] read schema from vscode: vscode://schemas/ignoredSettings
+2026-02-12 12:22:41.044 [info] [GitHub Authentication] Getting sessions for all scopes...
+2026-02-12 12:22:41.044 [info] [GitHub Authentication] Got 0 sessions for ...
+2026-02-12 12:22:41.063 [error] [Network] #13: https://main.vscode-cdn.net/extensions/chat.json - error GET Failed to fetch
+2026-02-12 12:22:41.064 [warning] [Window] Failed to fetch chat participant registry Failed to fetch
+2026-02-12 12:22:41.077 [info] [JSON Language Server] cancelled
+2026-02-12 12:22:41.078 [info] [JSON Language Server] read schema from vscode: vscode://schemas/settings/user
+2026-02-12 12:22:41.124 [info] [JSON Language Server] schema change detected vscode://schemas/settings/user
+2026-02-12 12:22:41.144 [info] [JSON Language Server] read schema from vscode: vscode://schemas/settings/resourceLanguage
+2026-02-12 12:22:41.144 [info] [JSON Language Server] read schema from vscode: vscode://schemas/ignoredSettings
+2026-02-12 12:22:41.146 [info] [JSON Language Server] read schema from vscode: vscode://schemas/launch
+2026-02-12 12:22:41.147 [info] [JSON Language Server] read schema from vscode: vscode://schemas/token-styling
+2026-02-12 12:22:41.147 [info] [JSON Language Server] read schema from vscode: vscode://schemas/textmate-colors
+2026-02-12 12:22:41.147 [info] [JSON Language Server] read schema from vscode: vscode://schemas/workbench-colors
+2026-02-12 12:22:41.171 [info] [Window] [perf] Render performance baseline is 17ms
+2026-02-12 12:22:41.214 [info] [JSON Language Server] cancelled
+2026-02-12 12:22:41.215 [info] [JSON Language Server] read schema from vscode: vscode://schemas/settings/user
+2026-02-12 12:22:41.820 [info] [JSON Language Server] schema change detected vscode://schemas/settings/user
+2026-02-12 12:22:41.822 [info] [JSON Language Server] read schema from vscode: vscode://schemas/settings/user
+2026-02-12 12:22:41.923 [error] [Network] #3: https://mobile.events.data.microsoft.com/OneCollector/1.0?cors=true&content-type=application/x-json-stream - error POST net::ERR_NAME_NOT_RESOLVED
+2026-02-12 12:22:43.546 [error] [Network] #4: https://mobile.events.data.microsoft.com/OneCollector/1.0?cors=true&content-type=application/x-json-stream - error POST net::ERR_NAME_NOT_RESOLVED
+2026-02-12 12:22:44.168 [info] [JSON Language Server] schema change detected vscode://schemas/launch
+2026-02-12 12:22:44.169 [info] [JSON Language Server] read schema from vscode: vscode://schemas/settings/user
+2026-02-12 12:22:44.229 [info] [JSON Language Server] read schema from vscode: vscode://schemas/launch
+2026-02-12 12:22:45.051 [error] [Network] #5: https://mobile.events.data.microsoft.com/OneCollector/1.0?cors=true&content-type=application/x-json-stream - error POST net::ERR_NAME_NOT_RESOLVED
+2026-02-12 12:22:45.065 [error] [Network] #6: https://mobile.events.data.microsoft.com/OneCollector/1.0?cors=true&content-type=application/x-json-stream - error POST net::ERR_NAME_NOT_RESOLVED
+2026-02-12 12:22:48.270 [error] [Network] #7: https://mobile.events.data.microsoft.com/OneCollector/1.0?cors=true&content-type=application/x-json-stream - error POST net::ERR_NAME_NOT_RESOLVED
+2026-02-12 12:22:57.959 [error] [Network] #8: https://mobile.events.data.microsoft.com/OneCollector/1.0?cors=true&content-type=application/x-json-stream - error POST net::ERR_NAME_NOT_RESOLVED

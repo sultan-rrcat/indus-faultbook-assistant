@@ -1,0 +1,10 @@
+15-01-2026
+1. Integrated Qwen3 8B model as base general model
+2. Optimized GPU usage by adding gradient checkpointing and memory efficient attention 
+3. Incorporate parallel execution of intent classification pipelines
+
+04-11-2025
+1. Prompt changed for Zero data condition (Modified it for a straight forward answer.)
+2. Updated the fin_dataset incorporating system and device name issues. (now more towards system name without having user prompt mentioned 'system')
+3. Added feedback form for future usage.
+4. Created a new table feedback with fk from messages and session tables.
