@@ -33,8 +33,14 @@ class Settings(BaseSettings):
     ollama_timeout: int = 120000 #ms
     ollama_model: str = "lfm3:latest"
     ollama_think: bool = False
-    gemini_model: str = "gemini-2.5-flash-lite"
+    gemini_model: str = "gemini-3.5-flash-lite"
     gemini_api_key: SecretStr = SecretStr("") # SecretStr prevents the password from appearing in logs, tracebacks and repr(settings)
+
+    # Optional HTTP(S) proxy for cloud LLM providers (Gemini). Read from the
+    # standard proxy environment variables when present. Local Ollama traffic
+    # never uses the proxy.
+    https_proxy: str = ""
+    http_proxy: str = ""
     
     @property
     def cors_origin_list(self) -> list[str]:
