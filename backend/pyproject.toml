@@ -1,0 +1,46 @@
+[project]
+name = "indus-faultbook-assistant"
+version = "0.0.1"
+description = "Air-gapped fault book assistant (NL2SQL+Summarization)"
+requires-python = ">=3.12"
+dependencies = [
+  "fastapi>=0.115",
+  "uvicorn[standard]>=0.34",
+  "pydantic-settings>=2.7",
+  "pyodbc>=5.2",
+  "sqlglot>=26.0",
+  "httpx>=0.28",
+]
+[project.optional-dependencies]
+gemini = ["google-genai>=1.0"]
+dev = [
+  "pytest>=8.3",
+  "pytest-asyncio>=0.25",
+  "ruff>=0.9",
+  "mypy>=1.14",
+  "pre-commit>=4.0",
+]
+
+[tool.uv]
+package = false
+
+[tool.ruff]
+line-length = 200
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "ASYNC", "S"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S101", "S105", "S106"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+testpaths = ["tests"]
+markers = ["e2e: end-to-end tests requiring real SQL Server and Ollama"]
