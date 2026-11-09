@@ -107,6 +107,7 @@ indus-faultbook-assistant/
 - Microsoft ODBC Driver 18 for SQL Server
 - Access to the SQL Server instance hosting `SRS_flogbook`
 - Ollama running locally with the configured model pulled
+- Docker (Desktop) for the optional Open WebUI chat UI
 
 ## Quick start
 
@@ -136,6 +137,49 @@ uv sync
 POSIX shells can use `cp .env.example .env`.
 
 Open `http://localhost:8080/docs` for the interactive API documentation.
+
+## Open WebUI
+
+Optional local chat UI for the stack. It runs on port **3000** because port 8080 is already used by the API.
+
+### Prerequisites
+
+Docker Desktop running.
+
+### Start
+
+```powershell
+docker run -d --name open-webui `
+  --restart unless-stopped `
+  -p 3000:8080 `
+  -v open-webui-data:/app/backend/data `
+  ghcr.io/open-webui/open-webui:main
+```
+
+### Verify and access
+
+```powershell
+docker ps --filter name=open-webui   # expect (healthy)
+```
+
+Open `http://localhost:3000` and create the admin account on first run (the first visitor becomes admin).
+
+### Connect Open WebUI to Ollama
+
+1. Start Ollama on the host (`ollama serve` if it is not already running).
+2. In Open WebUI go to **Settings → Connections → OpenAI** and set the URL to `http://host.docker.internal:11434`.
+3. Verify the connection, then in **Settings → Models** enable the model (e.g. `lfm3:latest`).
+4. Select the model in the chat and send a test message.
+
+> **Note:** inside the container `localhost` refers to the container itself. Use `host.docker.internal` to reach Ollama on the host (Docker Desktop for Windows/macOS).
+
+### Lifecycle
+
+```powershell
+docker stop open-webui; docker start open-webui
+docker rm open-webui               # data survives in the open-webui-data volume
+docker volume rm open-webui-data   # deletes all UI data and settings
+```
 
 ## Configuration
 
