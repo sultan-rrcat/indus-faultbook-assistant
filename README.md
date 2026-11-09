@@ -167,11 +167,24 @@ Open `http://localhost:3000` and create the admin account on first run (the firs
 ### Connect Open WebUI to Ollama
 
 1. Start Ollama on the host (`ollama serve` if it is not already running).
-2. In Open WebUI go to **Settings → Connections → OpenAI** and set the URL to `http://host.docker.internal:11434`.
+2. In Open WebUI go to **Settings → Connections → Ollama** and set the URL to `http://host.docker.internal:11434`.
 3. Verify the connection, then in **Settings → Models** enable the model (e.g. `lfm3:latest`).
 4. Select the model in the chat and send a test message.
 
 > **Note:** inside the container `localhost` refers to the container itself. Use `host.docker.internal` to reach Ollama on the host (Docker Desktop for Windows/macOS).
+
+### Connect the backend as a model
+
+The backend exposes an OpenAI-compatible API under `/v1`, so Open WebUI can use the fault-book assistant as a chat model.
+
+1. Start the API (see [Quick start](#quick-start)).
+2. In Open WebUI go to **Settings → Connections → OpenAI** and set the URL to `http://host.docker.internal:8080/v1`.
+3. Enter any non-empty API key (the backend does not require authentication yet) and verify the connection.
+4. Start a new chat, select the `faultbook-assistant` model, and ask a fault-book question.
+
+> Replies contain the natural-language answer only. The generated SQL and row count are available from `POST /api/v1/chat` and the application logs.
+>
+> Open WebUI's helper tasks (chat titles, tags, follow-up suggestions) are detected via their `### Task:` prompt and answered directly by the LLM, bypassing the SQL pipeline.
 
 ### Lifecycle
 
@@ -202,7 +215,8 @@ All settings are read from `backend/.env` or environment variables.
 | `OLLAMA_MODEL` | `lfm3:latest` | Local model name |
 | `OLLAMA_THINK` | `false` | Enable model reasoning output. Keep `false` for SQL generation so the model returns only the query |
 | `GEMINI_API_KEY` | empty | Required only when `LLM_PROVIDER=gemini` |
-| `GEMINI_MODEL` | `gemini-2.5-flash-lite` | Gemini model name |
+| `GEMINI_MODEL` | `gemini-3.5-flash-lite` | Gemini model name |
+| `HTTPS_PROXY` / `HTTP_PROXY` | empty | Optional proxy for Gemini requests (credentials URL-encoded). Ollama always bypasses the proxy |
 
 Secrets belong in `backend/.env`, which is gitignored. Never commit real credentials; `.env.example` contains placeholders only.
 
@@ -285,6 +299,20 @@ curl.exe -s http://localhost:8080/api/v1/health
 curl.exe -s -X POST http://localhost:8080/api/v1/chat `
   -H "Content-Type: application/json" `
   -d "{\"question\":\"List 3 recent faults related to control systems\"}"
+```
+
+### `GET /v1/models`
+
+OpenAI-compatible model list. Returns a single model, `faultbook-assistant`, used by Open WebUI and other OpenAI clients.
+
+### `POST /v1/chat/completions`
+
+OpenAI-compatible chat endpoint. The last `user` message is sent to the assistant and the natural-language answer is returned as message content (generated SQL and row count are omitted). Supports both regular JSON responses and `stream: true` (server-sent events).
+
+```powershell
+curl.exe -s -X POST http://localhost:8080/v1/chat/completions `
+  -H "Content-Type: application/json" `
+  -d "{\"model\":\"faultbook-assistant\",\"messages\":[{\"role\":\"user\",\"content\":\"How many faults today?\"}]}"
 ```
 
 ## Testing
