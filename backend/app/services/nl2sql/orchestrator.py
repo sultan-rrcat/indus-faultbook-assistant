@@ -76,3 +76,22 @@ class ChatService:
         summary = self._summarize(question, rows)
 
         return ChatResponse(answer=summary, sql=sql, row_count=len(rows))
+
+    def complete(
+        self,
+        messages: list[dict[str, Any]],
+        *,
+        temperature: float = 0.2,
+        max_tokens: int = 1024,
+    ) -> str:
+        """Answer a plain chat request without the NL2SQL pipeline.
+
+        Used for UI helper tasks (titles, tags, follow-up suggestions) that
+        Open WebUI sends to the selected model.
+        """
+        return self._provider.generate(
+            self._model,
+            messages,
+            temperature=temperature,
+            max_tokens=max_tokens,
+        )
