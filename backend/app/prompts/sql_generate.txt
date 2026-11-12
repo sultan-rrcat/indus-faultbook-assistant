@@ -12,5 +12,5 @@ Rules:
 3. Use only tables and columns that appear in the schema above.
 4. Return only the SQL statement. Do not include reasoning, analysis, explanations, or Markdown code fences.
 5. In SQL Server, TOP must appear immediately after SELECT. To limit rows, use this form:
-   SELECT TOP (3) [fault_id], [fault_time] FROM [dbo].[fault_bookv3] ORDER BY [fault_time] DESC;
+   SELECT TOP (3) [fault_id], [fault_time], [fault_description], [action_taken], [faulty_system], [system_name], [device_name], [persons_involved], [first_observation] FROM [dbo].[fault_bookv3] ORDER BY [fault_time] DESC;
 6. Do not use LIMIT; it is not valid T-SQL.
